@@ -77,6 +77,11 @@ const app = Vue.createApp({
         });
     },
     addToCart(id, qty = 1) {
+      if(qty < 1 || qty % 1 != 0){
+        alert("輸入數量錯誤");
+        return
+      }
+
       const data = {
         product_id: id,
         qty,
@@ -109,8 +114,7 @@ const app = Vue.createApp({
         });
     },
     updateCartItem(item) {
-      // console.log(document.querySelector(`[data-input="${item.id}"]`).checkValidity())
-      if(!document.querySelector(`[data-input="${item.id}"]`).checkValidity()) {
+      if(item.qty < 1 || item.qty % 1 != 0){
         alert("輸入數量錯誤");
         return
       }
