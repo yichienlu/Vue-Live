@@ -110,7 +110,7 @@
                                 <td>
                                     <div class="input-group input-group-sm">
                                         <div class="input-group mb-3">
-                                            <input min="1" type="number"
+                                            <input min="1" step="1" type="number"
                                                 onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57"
                                                 class="form-control" v-model.number="item.qty"
                                                 @change="updateCartItem(item)">
@@ -224,7 +224,7 @@
                                 <div>
                                     <div class="input-group">
                                         <input ref="input" type="number"
-                                        onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" class="form-control" v-model.number="qty" min="1">
+                                        onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" class="form-control" v-model.number="qty" min="1" step="1">
                                         <button type="button" class="btn btn-primary"
                                         @click="addToCart">加入購物車</button>
                                     </div>
