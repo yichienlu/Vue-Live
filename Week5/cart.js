@@ -109,10 +109,10 @@ const app = Vue.createApp({
         });
     },
     updateCartItem(item) {
-      if(!document.activeElement.checkValidity()) {
-        alert("輸入數量錯誤");
-        return
-      }
+      // if(!document.activeElement.checkValidity()) {
+      //   alert("輸入數量錯誤");
+      //   return
+      // }
 
       const data = {
         product_id: item.id,
